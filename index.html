@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title> Ngo List  </title>
+    <link rel="stylesheet" href="https://maxcdn.  e.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <body>
+        <h1> Welcome to Startup World</h1>
+        <h3> List of Startups</h3>
+        <div>
+        <script type="text/javascript">
+             var opts = {
+                 url: 'http://localhost:3000/rows/'
+             };
+
+             fetch(opts)
+                 .then((res) => {
+                     if (res.ok) {
+                         return res.json();
+                     }
+                  })
+                  .then((rows) => {
+                          <% for (var i = 0; i < data.length; i++) { %>
+                                 <%= data[i].id %>,&nbsp;
+                                 <%= data[i].name %>
+                                
+                                 <% } %>
+                   })
+                   .catch(console.log);
+        </script>
+        </div>
+        
+           </body>
+</html>
